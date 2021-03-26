@@ -167,7 +167,7 @@ async function chuckFacts() {
   console.log(data.value);
   footerQuote.textContent = data.value;
 }
-chuckFacts();
+// chuckFacts();
 
 const footer = document.querySelector("#footer-last");
 const footerQuote = document.querySelector(".quote");
@@ -183,7 +183,7 @@ const closeModal = (e) => {
 
 window.addEventListener("click", (e) => {
   if (e.target === modal) {
-    false;
+    console.log("click");
   } else {
     overlay.classList.remove("active");
   }
@@ -198,4 +198,16 @@ const openModal = (e) => {
 footer.addEventListener("mouseenter", openModal);
 closeBtn.addEventListener("click", closeModal);
 
-// githug
+// Element shake
+
+const input = document.querySelector(".contact-container");
+const submit = document.querySelector(".app-form-button");
+
+const observer = new IntersectionObserver(
+  function (entries) {
+    if (entries[0].isIntersecting === true) input.classList.toggle("shake");
+  },
+  { threshold: [1] }
+);
+
+observer.observe(document.querySelector(".contact-container"));
