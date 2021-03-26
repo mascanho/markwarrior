@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
+      integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
+      crossorigin="anonymous"
+    ></script>
+
+
+
+    <title>Mark Warrior.com</title>
+  </head>
+  <body>
+    <header id="header">
+      <nav class="nav">
+        <button class="toggle-menu">
+          <span id="burger"></span>
+        </button>
+      </nav>
+    </header>
+
+    <section>
+      <div id="menu" class="">
+        <nav class="main-nav">
+          <ul>
+            <li>
+              <a href="#"> About </a>
+            </li>
+            <li>
+              <a href="#"> Pricing </a>
+            </li>
+
+            <li>
+              <a href="#"> Contact </a>
+            </li>
+          </ul>
+        </nav>
+
+        <footer class="menu-footer">
+          <nav class="footer-nav">
+            <ul>
+              <li>
+                <a href="#" target="_blank" rel="noopener noreferrer"
+                  ><i class="fab fa-instagram"> Instagram</i></a
+                >
+              </li>
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+              ><i id="social" class="fab fa-github"> Gitub</i
+            ></a>
+            </li>
+              <li>
+                <a href="#" target="_blank" rel="noopener noreferrer"
+                ><i class="fab fa-facebook"> Facebook</i
+              ></a>
+                </a>
+             
+            </ul>
+          </nav>
+        </footer>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+
+    <div class="overlay">
+      <div class="modal">
+        <img src="./images/chuck.jpeg" alt="" srcset="">
+        <span class="close">&#9889;</span>
+        <h4 class="">Before you go...</h4>
+        <h4>Thank you for visiting my humble page.</h4>
+        <h4>Here is a random fact from this page's sponsor:</h4>
+        <h4 class="quote"></h4>
+      </div>
+    </div>
+
+    <!-- Social Media Menu -->
+    <div class="sticky-socials">
+      <ul id="socials">
+        <li>
+          <a href="#" target="_blank" rel="noopener noreferrer"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </li>
+        <li>
+          <a href="#" target="_blank" rel="noopener noreferrer"
+            ><i class="fab fa-facebook"></i
+          ></a>
+        </li>
+        <li>
+          <a href="#" target="_blank" rel="noopener noreferrer"
+            ><i id="social" class="fab fa-github"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="sticky-socials-bg"></div>
+    <!-- Social Media Menu -->
+
+    <div class="arrows">
+      <div class="arrow-up"><i class="fas fa-arrow-up"></i></div>
+      <div class="arrow-down"><i class="fas fa-arrow-down"></i></div>
+    </div>
+
+    <main>
+      <section id="section1">
+        <h1 class="focus">Marco Guerreiro</h1>
+        <ul class="flicker loves">
+          <li><span>.</span>Marketing Guru</li>
+          <li><span>.</span>Developer</li>
+          <li><span>.</span>Photographer</li>
+        </ul>
+        <a href="#contact"> <button class="focus jello">Contact</button></a>
+        <div class="vertical-text">
+          <h7 class="vertical bounce">scroll down <span>...</span></h7>
+        </div>
+      </section>
+    </main>
+
+    <section id="section3">
+      <h1>About</h1>
+      <h2><em>Let me introduce myself</em></h2>
+      <div class="profile">
+        <img src="./images/203536.png" alt="" srcset="" />
+        <h4>
+          I was born in Portugal and I am currently living and working in the
+          UK. <br> With a passion for marketing, coding, photography & video.
+        </h4>
+      </div>
+      <div class="hero">
+        <div class="image-hero">
+          <h3>Profile:</h3>
+
+          <ul>
+            <li><strong>Fullname:</strong></li>
+            <li><span>Marco Guerreiro</span></li>
+          </ul>
+          <ul>
+            <li><strong>Nationality:</strong></li>
+            <li><span>Portuguese</span></li>
+          </ul>
+          <ul>
+            <li><strong>Speaks:</strong></li>
+            <li><span>English, French, Spanish</span></li>
+          </ul>
+          <ul>
+            <li><strong>Job:</strong></li>
+            <li><span>Marco Guerreiro</span></li>
+          </ul>
+
+          <ul>
+            <li><strong>Email:</strong></li>
+            <li><span>Marco Guerreiro</span></li>
+          </ul>
+          <ul>
+            <li><strong>Hobbies:</strong></li>
+            <li><span>Marco Guerreiro</span></li>
+          </ul>
+        </div>
+        <div class="text-hero">
+          <!-- Progress BArs -->
+          <!-- Skills Bar -->
+          <h3>Skills:</h3>
+          <div class="skillbar clearfix" data-percent="100%">
+            <div class="skillbar-title" style="background: #d35400">
+              <span>HTML5</span>
+            </div>
+            <div class="skillbar-bar" style="background: #e67e22"></div>
+            <div class="skill-bar-percent">100%</div>
+          </div>
+          <!-- End Skill Bar -->
+
+          <div class="skillbar clearfix" data-percent="98%">
+            <div class="skillbar-title" style="background: #2980b9">
+              <span>CSS3</span>
+            </div>
+            <div class="skillbar-bar" style="background: #3498db"></div>
+            <div class="skill-bar-percent">98%</div>
+          </div>
+          <!-- End Skill Bar -->
+
+          <div class="skillbar clearfix" data-percent="50%">
+            <div class="skillbar-title" style="background: #2c3e50">
+              <span>jQuery</span>
+            </div>
+            <div class="skillbar-bar" style="background: #2c3e50"></div>
+            <div class="skill-bar-percent">50%</div>
+          </div>
+          <!-- End Skill Bar -->
+
+          <div class="skillbar clearfix" data-percent="60%">
+            <div class="skillbar-title" style="background: #46465e">
+              <span>Javascript</span>
+            </div>
+            <div class="skillbar-bar" style="background: #5a68a5"></div>
+            <div class="skill-bar-percent">60%</div>
+          </div>
+          <!-- End Skill Bar -->
+
+          <div class="skillbar clearfix" data-percent="85%">
+            <div class="skillbar-title" style="background: #333333">
+              <span>Wordpress</span>
+            </div>
+            <div class="skillbar-bar" style="background: #525252"></div>
+            <div class="skill-bar-percent">85%</div>
+          </div>
+          <!-- End Skill Bar -->
+
+          <div class="skillbar clearfix" data-percent="90%">
+            <div class="skillbar-title" style="background: #27ae60">
+              <span>SEO</span>
+            </div>
+            <div class="skillbar-bar" style="background: #2ecc71"></div>
+            <div class="skill-bar-percent">90%</div>
+          </div>
+          <!-- End Skill Bar -->
+
+          <div class="skillbar clearfix" data-percent="95%">
+            <div class="skillbar-title" style="background: #941010">
+              <span>G-Analytics</span>
+            </div>
+            <div class="skillbar-bar" style="background: #941010"></div>
+            <div class="skill-bar-percent">95%</div>
+          </div>
+
+          <div class="skillbar clearfix" data-percent="70%">
+            <div class="skillbar-title" style="background: #124e8c">
+              <span>S. Media</span>
+            </div>
+            <div class="skillbar-bar" style="background: #4288d0"></div>
+            <div class="skill-bar-percent">70%</div>
+          </div>
+
+          <div class="skillbar clearfix" data-percent="70%">
+            <div class="skillbar-title" style="background: #124e8c">
+              <span>Premniere</span>
+            </div>
+            <div class="skillbar-bar" style="background: #4288d0"></div>
+            <div class="skill-bar-percent">70%</div>
+          </div>
+
+          <div class="skillbar clearfix" data-percent="70%">
+            <div class="skillbar-title" style="background: #124e8c">
+              <span>Lightroom</span>
+            </div>
+            <div class="skillbar-bar" style="background: #4288d0"></div>
+            <div class="skill-bar-percent">70%</div>
+          </div>
+          <div class="skillbar clearfix" data-percent="70%">
+            <div class="skillbar-title" style="background: #124e8c">
+              <span></span>
+            </div>
+            <div class="skillbar-bar" style="background: #4288d0"></div>
+            <div class="skill-bar-percent">70%</div>
+          </div>
+          <div class="skillbar clearfix" data-percent="80%">
+            <div class="skillbar-title" style="background: #124e8c">
+              <span>Linux</span>
+            </div>
+            <div class="skillbar-bar" style="background: #4288d0"></div>
+            <div class="skill-bar-percent">80%</div>
+          </div>
+          <!-- End Skill Bar -->
+
+          <!-- Progress BArs -->
+        </div>
+      </div>
+    </section>
+
+    <section id="section2">
+      <h1>Photography</h1>
+      <div class="intro">
+        <em>Some of my photos and videos...</em>
+      </div>
+
+                          <div class="container">
+                            <div class="mySlides">
+                              <div class="numbertext">1 / 6</div>
+                              <img src="./images/203536.png" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                              <div class="numbertext">2 / 6</div>
+                              <img src="img_5terre_wide.jpg" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                              <div class="numbertext">3 / 6</div>
+                              <img src="img_mountains_wide.jpg" style="width:100%">
+                            </div>
+                              
+                            <div class="mySlides">
+                              <div class="numbertext">4 / 6</div>
+                              <img src="img_lights_wide.jpg" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                              <div class="numbertext">5 / 6</div>
+                              <img src="img_nature_wide.jpg" style="width:100%">
+                            </div>
+                              
+                            <div class="mySlides">
+                              <div class="numbertext">6 / 6</div>
+                              <img src="img_snow_wide.jpg" style="width:100%">
+                            </div>
+                              
+                            <a class="prev" onclick="plusSlides(-1)">❮</a>
+                            <a class="next" onclick="plusSlides(1)">❯</a>
+
+                            <div class="caption-container">
+                              <p id="caption">Name Here</p>
+                            </div>
+
+                           
+                          </div>   
+    </section>
+
+    <section id="contact">
+      <form action="post">
+      <div class="background">
+        <div class="container">
+          <div class="screen">
+            <div class="screen-header">
+              <div class="screen-header-left">
+                <div class="screen-header-button close"></div>
+                <div class="screen-header-button maximize"></div>
+                <div class="screen-header-button minimize"></div>
+              </div>
+              <div class="screen-header-right">
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+              </div>
+            </div>
+            <div class="screen-body">
+              <div class="screen-body-item left">
+                <div class="app-title">
+                  <span>CONTACT</span>
+                  <span>MARCO GUERREIRO</span>
+                </div>
+                <div class="app-contact">CONTACT INFO : +62 81 314 928 595</div>
+              </div>
+              <div class="screen-body-item">
+                <div class="app-form">
+                  <div class="app-form-group">
+                    <input class="app-form-control" placeholder="NAME">
+                  </div>
+                  <div class="app-form-group">
+                    <input class="app-form-control" placeholder="EMAIL">
+                  </div>
+                  <div class="app-form-group">
+                    <input class="app-form-control" placeholder="CONTACT NO">
+                  </div>
+                  <div class="app-form-group message">
+                    <input class="app-form-control" placeholder="MESSAGE">
+                  </div>
+                  <div class="app-form-group buttons">
+             
+                    <input class="app-form-button" type="submit" value="Submit">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </form>
+    <footer id="footer-last">
+      <ul>
+        <li>Made with <i class="fas fa-heart"></i> by MARCO</li>
+    
+      </ul>
+    </footer>
+    </section>
+
+
+
+   
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
+      integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
