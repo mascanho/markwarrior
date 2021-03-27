@@ -52,12 +52,13 @@ const menu = document.querySelector(".burger");
 const socialIcons = document.querySelector("#socials");
 const socialsBG = document.querySelector(".sticky-socials-bg");
 const images = document.querySelectorAll("img");
+const socialsIcons = document.querySelector(".sticky-socials");
 
-for (let i = 0; i < images.length; i++) {
-  images[i].addEventListener("click", () => {
-    console.log(`you clicked number ${i}`);
-  });
-}
+// for (let i = 0; i < images.length; i++) {
+//   images[i].addEventListener("click", () => {
+//     console.log(`you clicked number ${i}`);
+//   });
+// }
 
 // Arrow Toggles
 arrowUp.addEventListener("click", () => {
@@ -80,9 +81,11 @@ window.onscroll = function () {
 
 function scrollFunction() {
   if (window.pageYOffset >= section.scrollHeight) {
+    socialsIcons.style.position = "fixed";
     socialsBG.style.opacity = "1";
     socialIcons.classList.add("horizontal");
   } else {
+    socialsIcons.style.position = "absolute";
     socialsBG.style.opacity = "0";
     socialIcons.classList.remove("horizontal");
   }
@@ -126,22 +129,45 @@ jQuery(document).ready(function () {
 });
 
 // Image Gallery
-var slideIndex = 1;
+const gallery = document.querySelectorAll(".mySlides");
+const photoCaption = document.querySelector("#caption");
+var slideIndex = 0;
 showSlides(slideIndex);
+
+captionText = gallery[slideIndex - 1].firstElementChild.dataset.title;
+photoCaption.style.opacity = "1";
+photoCaption.innerHTML = `<span>&#128248; </span> ${captionText}`;
 
 function plusSlides(n) {
   showSlides((slideIndex += n));
+  let captionText = gallery[slideIndex - 1].firstElementChild.dataset.title;
+  photoCaption.textContent = captionText;
+  photoCaption.style.opacity = "0";
+  photoCaption.style.opacity = "1";
+
+  photoCaption.innerHTML = ` 
+      
+      <p id="caption"><span>&#128248; </span>${captionText}</p>
+      
+  `;
 }
 
 function currentSlide(n) {
   showSlides((slideIndex = n));
 }
 
+// gallery.forEach((item, index) => {
+//   console.dir(item.childNodes[1].attributes[1].value);
+//   const data = item.childNodes[1].attributes[1].value;
+//   photoCaption.textContent = slideIndex.value;
+// });
+
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
 
   var captionText = document.getElementById("caption");
+
   if (n > slides.length) {
     slideIndex = 1;
   }
@@ -153,12 +179,12 @@ function showSlides(n) {
   }
 
   slides[slideIndex - 1].style.display = "block";
+
   // dots[slideIndex - 1].className += " active";
   // captionText.innerHTML = dots[slideIndex - 1].alt;
 }
 
 // FOOTER with CHUCK QUOTE
-
 const urlAPI = "https://api.chucknorris.io/jokes/random";
 
 async function chuckFacts() {
@@ -202,10 +228,16 @@ closeBtn.addEventListener("click", closeModal);
 
 const input = document.querySelector(".contact-container");
 const submit = document.querySelector(".app-form-button");
+const elementsFadeOut = document.querySelectorAll(".fading");
+
+console.log(elementsFadeOut);
 
 const observer = new IntersectionObserver(
   function (entries) {
-    if (entries[0].isIntersecting === true) input.classList.toggle("shake");
+    if (entries[0].isIntersecting === true) {
+      input.classList.toggle("shake");
+      console.log("fading here");
+    }
   },
   { threshold: [1] }
 );

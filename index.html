@@ -131,19 +131,23 @@
         </ul>
         <a href="#contact"> <button class="focus jello">Contact</button></a>
         <div class="vertical-text">
-          <h7 class="vertical bounce">scroll down <span>...</span></h7>
+          <h7 class="vertical bounce">Scroll<span>&#128073</span></h7>
         </div>
       </section>
     </main>
 
-    <section id="section3">
-      <h1>About</h1>
+    <section  id="section3">
+      <div class="hey-there">
+        Hey there 
+        <span class="emoji-hi">&#128075;</span> 
+      </div>
+      
       <h2><em>Let me introduce myself</em></h2>
       <div class="profile">
         <img src="./images/99886.png" alt="" srcset="" />
         <h4>
           I was born in Portugal and I am currently living and working in the
-          UK.     &#128187; <br> I have a passion for marketing, coding, photography & video.     &#10084;&#65039; <br>
+          UK.     &#128187; <br> I have a passion for marketing, coding, photography & video.    <span class="heartbeat" >&#10084;&#65039;</span>  <br>
           When I am not online I am usually hiking or getting lost in the wild. &#127956;&#65039;
         </h4>
       </div>
@@ -287,37 +291,26 @@
       </div>
     </section>
 
-    <section id="section2">
+    <section id="section2" class="fading">
       <h1>Photography</h1>
-      <div class="intro">
+      <div class="intro fading">
         <em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas inventore harum at ratione a? Rerum iste nihil itaque neque! Ipsum.</em>
       </div>
 
-                          <div class="gallery-container">
+                          <div id="gallery" class="gallery-container">
                             <div class="mySlides">
-                              <div data-title="photo in a volcano" class="numbertext"></div>
-                              <img src="./images/Portfolio/4.jpg" style="width:100%">
+                              <div data-photo="1" data-title="photo 1" class="numbertext"></div>
+                              <img src="./images/Portfolio/4.jpg">
                             </div>
                             <div class="mySlides">
-                              <div class="numbertext"></div>
-                              <img src="./images/Portfolio/8.jpg" style="width:100%">
+                              <div data-photo="2" data-title="photo 2" class="numbertext"></div>
+                              <img src="./images/Portfolio/2.jpg">
                             </div>
                             <div class="mySlides">
-                              <div class="numbertext"></div>
-                              <img src="./images/Portfolio/12.jpg" style="width:100%">
+                              <div data-photo="3" data-title="Alte" class="numbertext"></div>
+                              <img src="./images/Portfolio/5.jpg">
                             </div>
-                            <div class="mySlides">
-                              <div class="numbertext"></div>
-                              <img src="./images/203536.png" style="width:100%">
-                            </div>
-                            <div class="mySlides">
-                              <div class="numbertext"></div>
-                              <img src="./images/doctor.jpg" style="width:100%">
-                            </div>
-                            <div class="mySlides">
-                              <div class="numbertext"></div>
-                              <img src="./images/203536.png" style="width:100%">
-                            </div>
+                           
 
                             
                               
@@ -330,6 +323,11 @@
 
                            
                           </div>   
+    </section>
+
+    <!-- RECOMENDED  -->
+    <section id="recomended" class="fading">
+
     </section>
 
     <section id="contact">
@@ -373,7 +371,7 @@
                   </div>
                   <div class="app-form-group buttons">
              
-                    <input class="app-form-button" type="submit" value="Submit">
+                    <input class="app-form-button" type="submit" value="Submit "> <span><i class="fas fa-paper-plane" aria-hidden="true"></i></span>
                     
                   </div>
                 </div>
@@ -387,7 +385,7 @@
     </form>
     <footer id="footer-last">
       <ul>
-        <li>Made with <i class="fas fa-heart"></i> by MARCO</li>
+        <li>Made with <i class="fas fa-heart heartbeat"></i> by MARCO</li>
     
       </ul>
     </footer>
