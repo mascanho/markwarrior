@@ -1102,8 +1102,37 @@ button:hover {
   li {
     margin-bottom: 2px;
   }
+
   span {
     color: rgb(128, 128, 128);
+  }
+
+  .download {
+    text-align: left;
+    width: 100%;
+  }
+
+  .download span {
+    text-align: center;
+    color: rgb(31, 27, 83);
+
+    font-weight: 600;
+    border-bottom-style: none !important;
+    padding-bottom: 5px;
+    background: url("https://static1.squarespace.com/static/5c6dfcde3560c35c28d5a075/t/5f470507d4d74d11f98bcf40/1598489863396/wave-2.svg");
+    background-color: rgba(0, 0, 0, 0);
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-size: auto;
+    background-repeat: repeat;
+    background-position-x: 0%;
+    background-position-y: 89% !important;
+    background-size: auto auto;
+    background-repeat: repeat-x;
+    background-size: 15px 5px;
+    background-position: 2px 19px;
+    background-position-y: 19px;
   }
 }
 
