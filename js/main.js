@@ -172,11 +172,18 @@ function plusSlides(n) {
       <p id="caption"><span>&#128248; </span>${captionText}</p>
       
   `;
-  if (slideIndex === 3) {
+  if (slideIndex === 8) {
     document.querySelector("#section2").style.background =
-      "linear-gradient(to right, #d3374b 0%, #212149 100%)";
+      "linear-gradient(to right, #474747 0%, #212149 100%)";
     document.querySelector("#section2").firstElementChild.style.opacity = "1";
     document.querySelector(".caption-container").style.opacity = "0";
+    modal2.style.display = "block";
+
+    if ((modal2.style.display = "block")) {
+      setTimeout(() => {
+        modal2.style.display = "none";
+      }, 5000);
+    }
   }
   console.log(slideIndex);
 }
@@ -227,8 +234,14 @@ async function chuckFacts() {
 const footer = document.querySelector("#footer-last");
 const footerQuote = document.querySelector(".quote");
 const closeBtn = document.querySelector(".close");
+const closeBtn2 = document.querySelector(".close2");
 const overlay = document.querySelector(".overlay");
 const modal = document.querySelector(".modal");
+const modal2 = document.querySelector(".modal2");
+
+closeBtn2.addEventListener("click", function () {
+  modal2.style.display = "none";
+});
 
 const closeModal = (e) => {
   overlay.classList.toggle("active");

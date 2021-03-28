@@ -528,7 +528,7 @@
 
 .container h1,
 .container h2 {
-  font-weight: 200;
+  font-weight: 500;
   margin: 0.4rem;
 }
 
@@ -1583,8 +1583,8 @@ button:hover {
       -ms-flex-align: center;
           align-items: center;
   color: rgba(255, 255, 255, 0.76);
-  background: -webkit-gradient(linear, left top, right top, from(#d3374b), to(#212149));
-  background: linear-gradient(to right, #d3374b 0%, #212149 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#474747), to(#212149));
+  background: linear-gradient(to right, #474747 0%, #212149 100%);
   display: block;
   text-align: center;
   position: relative;
@@ -1592,15 +1592,15 @@ button:hover {
 
 #section2 h1 {
   padding: 1.5em 0 5px 0;
-  margin: 0;
+  margin-bottom: 20px;
   font-size: 350%;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 #section2 span {
   font-size: 20px;
-  margin-top: 10px;
-  color: #212149;
+  margin-top: 1em;
+  color: #afafaf;
   letter-spacing: 5px;
   font-weight: 500;
 }
@@ -1656,8 +1656,8 @@ button:hover {
   font-size: 200%;
   text-align: center;
   padding: 50px 0 20px 0;
-  margin-bottom: -1.6em;
-  font-size: 200%;
+  margin-bottom: -1.2em;
+  font-size: 250%;
   color: #7e7e7e;
   font-weight: 900 !important;
 }
@@ -1887,10 +1887,10 @@ button:hover {
 
 #recomended .container .images .top-img {
   position: absolute;
-  right: 60px;
+  left: 40px;
   top: 0;
-  width: 30%;
-  height: 40%;
+  width: 60%;
+  height: 45%;
 }
 
 #recomended .container .images .mid-img {
@@ -2057,7 +2057,7 @@ button:hover {
 .next {
   cursor: pointer;
   position: absolute;
-  bottom: 50%;
+  bottom: 48%;
   left: -37%;
   width: 100%;
   color: white;
@@ -2076,6 +2076,7 @@ button:hover {
 .next {
   right: -110%;
   border-radius: 3px 0 0 3px;
+  bottom: 48%;
   z-index: 1;
   position: absolute;
 }
@@ -2534,6 +2535,63 @@ footer ul i {
   position: absolute;
   top: 15px;
   right: 15px;
+  cursor: pointer;
+}
+
+aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  height: auto;
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 5;
+}
+
+.modal2 {
+  border: 1px solid #a3a3a3;
+  position: fixed;
+  width: 470px;
+  background: -webkit-gradient(linear, left top, right top, from(#00646de5), to(#02338f));
+  background: linear-gradient(to right, #00646de5 0%, #02338f 100%);
+  border-radius: 5px;
+  height: 100px;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: none;
+}
+
+.modal2 h4 {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.modal2 span {
+  margin: 0;
+  padding: 0;
+}
+
+.modal2 a {
+  color: #c23d00;
+}
+
+.modal2 .close2 {
+  position: absolute;
+  top: -10px;
+  right: 2px;
+  font-size: 6px;
+  padding: 5px;
   cursor: pointer;
 }
 
