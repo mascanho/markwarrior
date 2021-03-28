@@ -160,6 +160,7 @@ photoCaption.innerHTML = `<span>&#128248; </span> ${captionText}`;
 function plusSlides(n) {
   document.querySelector("#section2").style.background = "black";
   document.querySelector("#section2").firstElementChild.style.opacity = "0";
+  document.querySelector(".caption-container").style.opacity = "1";
   showSlides((slideIndex += n));
   let captionText = gallery[slideIndex - 1].firstElementChild.dataset.title;
   photoCaption.textContent = captionText;
@@ -175,6 +176,7 @@ function plusSlides(n) {
     document.querySelector("#section2").style.background =
       "linear-gradient(to right, #d3374b 0%, #212149 100%)";
     document.querySelector("#section2").firstElementChild.style.opacity = "1";
+    document.querySelector(".caption-container").style.opacity = "0";
   }
   console.log(slideIndex);
 }

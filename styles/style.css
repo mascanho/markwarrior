@@ -2,6 +2,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
 /* Portrait */
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+  #menu .menu-footer {
+    padding: 2rem;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    display: none;
+  }
+  #menu .menu-footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
   .mySlides {
     display: none;
     width: auto;
@@ -1214,7 +1235,7 @@ button:hover {
   right: 15px;
   vertical-align: middle;
   width: 50px;
-  z-index: 3;
+  z-index: 4;
 }
 
 .toggle-menu span {
@@ -1334,8 +1355,8 @@ button:hover {
   position: fixed;
   z-index: 1;
   opacity: 0;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
   -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.794);
           box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.794);
 }
@@ -2099,6 +2120,7 @@ button:hover {
   bottom: -15px;
   right: 8em;
   z-index: 0;
+  opacity: 0;
 }
 
 .caption-container p {
