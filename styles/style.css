@@ -1,5 +1,286 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+/* Portrait */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+  .mySlides {
+    display: none;
+    width: auto;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .gallery-container a {
+    position: absolute;
+  }
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    bottom: 48%;
+    left: 0;
+    width: auto;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+    z-index: 1;
+  }
+  .next {
+    right: -95%;
+    bottom: 48%;
+    border-radius: 3px 0 0 3px;
+    z-index: 1;
+    position: absolute;
+  }
+  #recomended {
+    display: block !important;
+    height: 100%;
+  }
+  #recomended h1 {
+    margin: auto auto;
+    padding: 1.4em 0 0 0;
+    text-align: center;
+    font-size: 50px;
+  }
+  #recomended .container {
+    height: 100%;
+    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    word-wrap: break-word;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #recomended .container .btns {
+    display: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #recomended .container .images {
+    height: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #recomended .container .images .mid-img {
+    left: 1em;
+    bottom: 2em;
+  }
+  #recomended .container .images .bottom-img {
+    bottom: 1em;
+  }
+  .caption-container {
+    position: absolute;
+    top: 70%;
+    right: 8em;
+    z-index: 0;
+  }
+  .contact-container {
+    padding: 40px;
+  }
+}
+
+/* ----------- iPhone X ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+  .mySlides {
+    display: none;
+    width: auto;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .gallery-container a {
+    position: absolute;
+  }
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    bottom: 48%;
+    left: 0;
+    width: auto;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+    z-index: 1;
+  }
+  .next {
+    right: -95%;
+    bottom: 48%;
+    border-radius: 3px 0 0 3px;
+    z-index: 1;
+    position: absolute;
+  }
+  #recomended {
+    display: block !important;
+    height: 100%;
+  }
+  #recomended h1 {
+    margin: auto auto;
+    padding: 1.4em 0 0 0;
+    text-align: center;
+    font-size: 50px;
+  }
+  #recomended .container {
+    height: 100%;
+    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    word-wrap: break-word;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #recomended .container .btns {
+    display: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #recomended .container .images {
+    height: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #recomended .container .images .mid-img {
+    left: 1em;
+    bottom: 2em;
+  }
+  #recomended .container .images .bottom-img {
+    bottom: 1em;
+  }
+  .caption-container {
+    position: absolute;
+    top: 70%;
+    right: 8em;
+    z-index: 0;
+  }
+}
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .mySlides {
+    display: none;
+    width: auto;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .gallery-container a {
+    position: absolute;
+  }
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    bottom: 48%;
+    left: 0;
+    width: auto;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+    z-index: 1;
+  }
+  .next {
+    right: -95%;
+    bottom: 48%;
+    border-radius: 3px 0 0 3px;
+    z-index: 1;
+    position: absolute;
+  }
+  #recomended {
+    display: block !important;
+    height: 100%;
+  }
+  #recomended h1 {
+    margin: auto auto;
+    padding: 1.4em 0 0 0;
+    text-align: center;
+    font-size: 50px;
+  }
+  #recomended .container {
+    height: 100%;
+    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    word-wrap: break-word;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #recomended .container .btns {
+    display: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #recomended .container .images {
+    height: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #recomended .container .images .mid-img {
+    left: 1em;
+    bottom: 2em;
+  }
+  #recomended .container .images .bottom-img {
+    bottom: 1em;
+  }
+  .caption-container {
+    position: absolute;
+    top: 70%;
+    right: 8em;
+    z-index: 0;
+  }
+}
+
 #preload-container {
   width: 100vw;
   height: 100vh;
@@ -1285,6 +1566,7 @@ button:hover {
   background: linear-gradient(to right, #d3374b 0%, #212149 100%);
   display: block;
   text-align: center;
+  position: relative;
 }
 
 #section2 h1 {
@@ -1324,7 +1606,7 @@ button:hover {
 }
 
 #section3 .profile {
-  margin: 10px auto 2em auto;
+  margin: 20px auto 2em auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1383,6 +1665,7 @@ button:hover {
   width: 100%;
   padding: 15px 15px 10px 15px;
   font-weight: 900;
+  margin-top: 20px;
 }
 
 #section3 h4 {
@@ -1509,8 +1792,9 @@ button:hover {
 
 #recomended h1 {
   margin: auto auto;
-  padding: 0.6em;
+  padding: 1.4em;
   text-align: center;
+  font-size: 50px;
 }
 
 #recomended .container {
@@ -1556,10 +1840,12 @@ button:hover {
 }
 
 #recomended .container .text button {
-  width: 200px;
+  width: 150px;
   background: #ff1f53;
   color: lightgray;
   margin-top: 1em;
+  padding: 10px;
+  margin-right: 20px;
 }
 
 #recomended .container .images {
@@ -1696,13 +1982,23 @@ button:hover {
 
 /* Position the image container (needed to position the left and right arrows) */
 .gallery-container {
-  position: relative;
   width: 80%;
   height: 70%;
   padding: 20px;
-  margin: 5% auto 2% auto;
+  margin: auto;
   border-radius: 10px;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
 }
 
 .gallery-container a {
@@ -1719,12 +2015,15 @@ button:hover {
 /* Hide the images by default */
 .mySlides {
   display: none;
-  width: 100%;
-  height: 60%;
+  width: auto;
+  height: 85%;
+  border: 2px solid grey;
   border-radius: 10px;
   position: relative;
   overflow: hidden;
   margin: 0 auto;
+  -webkit-box-shadow: 1px 1px 10px black;
+          box-shadow: 1px 1px 10px black;
 }
 
 /* Add a pointer when hovering over the thumbnail images */
@@ -1737,23 +2036,27 @@ button:hover {
 .next {
   cursor: pointer;
   position: absolute;
-  top: 28%;
-  left: 5%;
-  width: auto;
+  bottom: 50%;
+  left: -37%;
+  width: 100%;
   color: white;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 20px;
   border-radius: 0 3px 3px 0;
   -moz-user-select: none;
    -ms-user-select: none;
        user-select: none;
   -webkit-user-select: none;
+  z-index: 1;
+  margin: auto auto;
 }
 
 /* Position the "next button" to the right */
 .next {
-  right: -82%;
+  right: -110%;
   border-radius: 3px 0 0 3px;
+  z-index: 1;
+  position: absolute;
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -1777,10 +2080,8 @@ button:hover {
   text-align: center;
   background-color: transparent;
   color: white;
-  width: 300px;
+  width: 200px;
   height: 40px;
-  border: 1px solid #0f0053;
-  background: rgba(0, 0, 65, 0.198);
   margin: 10px auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1794,6 +2095,10 @@ button:hover {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 30px;
+  position: absolute;
+  bottom: -15px;
+  right: 8em;
+  z-index: 0;
 }
 
 .caption-container p {

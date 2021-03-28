@@ -83,6 +83,7 @@ setTimeout(() => {
 
 // changing menu colour based on scroll
 const section = document.querySelector("#section1");
+const someElement = document.querySelector(".gallery-container");
 
 window.onscroll = function () {
   scrollFunction();
@@ -97,6 +98,15 @@ function scrollFunction() {
     socialsIcons.style.position = "absolute";
     socialsBG.style.opacity = "0";
     socialIcons.classList.remove("horizontal");
+  }
+
+  //TOP
+  if (someElement.getBoundingClientRect().top >= 0) {
+    console.log("TRIGGER: top of div reached.");
+  }
+  //BOTTOM
+  if (someElement.getBoundingClientRect().bottom <= 0) {
+    console.log("TRIGGER: bottom of div reached.");
   }
 }
 
@@ -148,6 +158,8 @@ photoCaption.style.opacity = "1";
 photoCaption.innerHTML = `<span>&#128248; </span> ${captionText}`;
 
 function plusSlides(n) {
+  document.querySelector("#section2").style.background = "black";
+  document.querySelector("#section2").firstElementChild.style.opacity = "0";
   showSlides((slideIndex += n));
   let captionText = gallery[slideIndex - 1].firstElementChild.dataset.title;
   photoCaption.textContent = captionText;
@@ -159,6 +171,12 @@ function plusSlides(n) {
       <p id="caption"><span>&#128248; </span>${captionText}</p>
       
   `;
+  if (slideIndex === 3) {
+    document.querySelector("#section2").style.background =
+      "linear-gradient(to right, #d3374b 0%, #212149 100%)";
+    document.querySelector("#section2").firstElementChild.style.opacity = "1";
+  }
+  console.log(slideIndex);
 }
 
 function currentSlide(n) {
@@ -234,7 +252,6 @@ footer.addEventListener("mouseenter", openModal);
 closeBtn.addEventListener("click", closeModal);
 
 // Element shake
-
 const input = document.querySelector(".contact-container");
 const submit = document.querySelector(".app-form-button");
 const elementsFadeOut = document.querySelectorAll(".fading");
@@ -245,7 +262,6 @@ const observer = new IntersectionObserver(
   function (entries) {
     if (entries[0].isIntersecting === true) {
       input.classList.toggle("shake");
-      console.log("fading here");
     }
   },
   { threshold: [1] }
