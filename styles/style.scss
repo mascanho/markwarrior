@@ -940,6 +940,11 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+
+    ul {
+      margin-top: 0px !important;
+      margin-bottom: 15px !important;
+    }
   }
 
   .text-hero {
@@ -1338,7 +1343,8 @@ side-tab2.active {
 
         img {
           margin: 2.5em auto;
-          height: auto;
+          height: 300px;
+          width: 400px;
           text-align: center;
           height: auto;
           text-align: center;
@@ -1346,6 +1352,7 @@ side-tab2.active {
           align-self: flex-end;
           align-items: center;
           border-radius: 10px;
+          padding-left: 6em;
         }
       }
 
@@ -1360,11 +1367,17 @@ side-tab2.active {
 
       button {
         width: 150px;
-        background: #ff1f53;
+        background: #d3374b;
         color: lightgray;
         margin-top: 1em;
         padding: 10px;
         margin-right: 20px;
+        font-size: 90%;
+      }
+
+      button:hover {
+        background: #b64453;
+        color: white;
       }
     }
 

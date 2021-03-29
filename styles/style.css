@@ -1542,6 +1542,11 @@ button:hover {
           justify-content: flex-start;
 }
 
+.hero .image-hero ul {
+  margin-top: 0px !important;
+  margin-bottom: 15px !important;
+}
+
 .hero .text-hero {
   width: 50%;
   max-width: 800px;
@@ -1996,7 +2001,8 @@ side-tab2.active {
 
 #recomended .container .text > div img {
   margin: 2.5em auto;
-  height: auto;
+  height: 300px;
+  width: 400px;
   text-align: center;
   height: auto;
   text-align: center;
@@ -2009,6 +2015,7 @@ side-tab2.active {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 10px;
+  padding-left: 6em;
 }
 
 #recomended .container .text h3 {
@@ -2022,11 +2029,17 @@ side-tab2.active {
 
 #recomended .container .text button {
   width: 150px;
-  background: #ff1f53;
+  background: #d3374b;
   color: lightgray;
   margin-top: 1em;
   padding: 10px;
   margin-right: 20px;
+  font-size: 90%;
+}
+
+#recomended .container .text button:hover {
+  background: #b64453;
+  color: white;
 }
 
 #recomended .container .images {
