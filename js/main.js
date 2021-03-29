@@ -351,3 +351,51 @@ function init() {
   // Init TypeWritter
   new TypeWritter(txtElement, words, wait);
 }
+
+// Tabs for the Image gallery
+const galleryContainer = document.querySelector("#gallery");
+const tabPhoto = document.querySelector(".photo-tab");
+const tabVideo = document.querySelector(".video-tab");
+const videoGallery = document.querySelector(".video-container");
+
+function openPhotoTab() {
+  tabVideo.style.boxShadow = "0px 0px 0px black";
+  tabPhoto.style.boxShadow = "1px 1px 10px #d3374b";
+  videoGallery.style.display = "none";
+  galleryContainer.style.display = "flex";
+}
+
+function openVideoTab() {
+  tabPhoto.style.boxShadow = "0px 0px 0px black";
+  tabVideo.style.boxShadow = "1px 1px 10px #d3374b";
+  galleryContainer.style.display = "none";
+  videoGallery.style.display = "block";
+}
+
+tabVideo.addEventListener("click", openVideoTab);
+tabPhoto.addEventListener("click", openPhotoTab);
+
+// Famous Quotes on the loader
+
+const preloader = document.querySelector("#preload-container");
+const preloaderMessage = document.querySelector("#message");
+
+const urlFamous = "https://quote-garden.herokuapp.com/api/v3/quotes";
+
+async function getFamousQuotes() {
+  const res = await fetch(urlFamous);
+  const data = await res.json();
+  let randomNum = Math.floor(Math.random() * 9);
+  console.log(randomNum);
+  console.log(data.data[randomNum].quoteAuthor);
+  console.log(data.data[randomNum].quoteText);
+
+  document.querySelector(".famous-quote").innerHTML = `
+  <h4><em>"${data.data[randomNum].quoteText}"</em></h4>
+  <h5><em>- ${data.data[randomNum].quoteAuthor}</em></h5>
+  
+  `;
+}
+getFamousQuotes();
+
+console.log(preloaderMessage);

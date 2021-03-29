@@ -69,7 +69,7 @@
  </g>
 </svg>
 
-	<div id="message">Loading burrito....</div>
+	<div id="message">Loading burrito...</div>
 </div>
 </section>
 <!-- END OF PRELOADER -->
@@ -237,7 +237,7 @@
             <li><span>Marco Guerreiro</span></li>
           </ul>
           <ul>
-            <div class="download"><span>Download CV</span></div>
+            <div class="download"> <a href="http://"> 👉<span> Download CV</span></a></div>
             
           </ul>
           
@@ -374,11 +374,11 @@
       <div class="container">
         <h1>My Portfolio</h1>
         <h2<span class="txt-type" data-wait="3000" data-words='["Photography","Videography", "Randomness"]'></span></h1>
-        
-      </div>
+          </div>
+
 
                           <div id="gallery" class="gallery-container">
-                         
+                           
                             <div class="mySlides">
                               <div data-photo="1" data-title="Advertising" class="numbertext"></div>
                               <img src="./images/Portfolio/4.jpg">
@@ -413,7 +413,7 @@
                               <div data-photo="8" data-title="Surreal" class="numbertext"></div>
                               <img src="./images/Portfolio/8.jpg">
                             </div>
-                           
+                    
 
                             
                               
@@ -423,9 +423,27 @@
                             <div class="caption-container">
                               <p id="caption">Name Here</p>
                             </div>
-                           
                           </div>     
-    </section>
+
+      <div class="video-container">
+
+        <div class="content">
+          <h5>More content soon! for now, just a random quote 🤖</h5>
+          <h5 class="famous-quote"></h5>
+        </div>
+      </div>
+        </div>
+    
+    
+    <!-- SIDE TAB -->
+   
+  <div class="photo-tab">
+      <h4>PHOTOS</h4>
+    </div>
+  <div class="video-tab">
+      <h4>VIDEOS</h4>
+    </div>
+                                           </section>
   
 
     <!-- RECOMENDED  -->
@@ -446,7 +464,7 @@
         </div>
         <div class="text">
           <div>
-          <h2>Lorem ipsum dolor sit amet <span class="underline">fdvfdvdfvfdv</span> consectetur adipisicing elit. Minima, a.</h2>
+          <h2>Lorem ipsum dolor sit amet <span class="underline">fdvfdvdfvfdv</span> .</h2>
           <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae earum rem iste deserunt quod provident officiis tenetur, necessitatibus, sequi recusandae assumenda incidunt, eum officia at aperiam repellendus ad molestiae consequuntur.</h3>
         
           <button>Visit Estralho</button>
@@ -465,7 +483,8 @@
     </section>
 
     <section id="contact">
-      <form action="post">
+     
+
       <div class="background">
         <div class="contact-container">
           <div class="screen">
@@ -491,21 +510,22 @@
               </div>
               <div class="screen-body-item">
                 <div class="app-form">
+                  <form action="mail.php" method="POST">
                   <div class="app-form-group">
-                    <input class="app-form-control" placeholder="NAME">
+                    <input type="text" name="name" class="app-form-control" placeholder="NAME">
                   </div>
                   <div class="app-form-group">
-                    <input class="app-form-control" placeholder="EMAIL">
+                    <input type="text" name="email" class="app-form-control" placeholder="EMAIL">
                   </div>
                   <div class="app-form-group">
                     <input class="app-form-control" placeholder="CONTACT NO">
                   </div>
                   <div class="app-form-group message">
-                    <input class="app-form-control" placeholder="MESSAGE">
+                    <input type="text" name="message" class="app-form-control" placeholder="MESSAGE">
                   </div>
                   <div class="app-form-group buttons">
              
-                    <input class="app-form-button" type="submit" value="Submit "> <span><i class="fas fa-paper-plane" aria-hidden="true"></i></span>
+                    <input class="app-form-button" type="submit" value="Send" >  <span> <i class="fas fa-paper-plane" aria-hidden="true"></i></span>
                     
                   </div>
                 </div>
