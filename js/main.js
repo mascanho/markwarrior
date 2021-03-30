@@ -172,7 +172,7 @@ function plusSlides(n) {
       <p id="caption"><span>&#128248; </span>${captionText}</p>
       
   `;
-  if (slideIndex === 8) {
+  if (slideIndex === 19) {
     document.querySelector("#section2").style.background =
       "linear-gradient(to right, #474747 0%, #212149 100%)";
     document.querySelector("#section2").firstElementChild.style.opacity = "1";
@@ -229,7 +229,7 @@ async function chuckFacts() {
   console.log(data.value);
   footerQuote.textContent = data.value;
 }
-// chuckFacts();
+chuckFacts();
 
 const footer = document.querySelector("#footer-last");
 const footerQuote = document.querySelector(".quote");
@@ -385,7 +385,7 @@ const urlFamous = "https://quote-garden.herokuapp.com/api/v3/quotes";
 async function getFamousQuotes() {
   const res = await fetch(urlFamous);
   const data = await res.json();
-  let randomNum = Math.floor(Math.random() * 9);
+  let randomNum = Math.floor(Math.random() * 9) + 1;
   console.log(randomNum);
   console.log(data.data[randomNum].quoteAuthor);
   console.log(data.data[randomNum].quoteText);
@@ -398,4 +398,62 @@ async function getFamousQuotes() {
 }
 getFamousQuotes();
 
-console.log(preloaderMessage);
+// Contact Form Validator
+const form = document.getElementById("form");
+const formName = document.getElementById("form-name");
+const formEmail = document.getElementById("form-email");
+const terminal = document.querySelector(".contact-container");
+const nameError = document.querySelector(".name-error");
+const emailError = document.querySelector(".email-error");
+const formText = document.querySelector("#form-message");
+const messageError = document.querySelector(".message-error");
+
+// Show input error message
+function showError(input, message) {
+  const formControl = formName.parentElement;
+  formControl.className;
+}
+
+// Event listeners
+form.addEventListener("submit", function (e) {
+  console.log("submit");
+
+  if (formName.value === "") {
+    terminal.classList.toggle("vibrate-terminal");
+    nameError.classList.add("error");
+    nameError.textContent = "You don't have a name?";
+
+    setTimeout(() => {
+      nameError.classList.remove("error");
+    }, 2000);
+
+    e.preventDefault();
+  }
+
+  if (formEmail.value === "") {
+    terminal.classList.toggle("vibrate-terminal");
+    emailError.classList.toggle("error");
+    emailError.textContent = "No email for me to reply?";
+
+    setTimeout(() => {
+      emailError.classList.remove("error");
+    }, 2000);
+
+    e.preventDefault();
+  }
+
+  if (formText.value === "") {
+    terminal.classList.toggle("vibrate-terminal");
+    messageError.classList.add("error");
+    messageError.textContent = "Forgot your message?";
+
+    setTimeout(() => {
+      messageError.classList.remove("error");
+    }, 2000);
+
+    console.log("no input");
+    e.preventDefault();
+  }
+});
+
+console.log(messageError.value);

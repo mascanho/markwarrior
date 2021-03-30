@@ -1,5 +1,90 @@
 /* Portrait */
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+  .modal {
+    width: 90%;
+  }
+
+  #section1 {
+    h1 {
+      font-size: 340%;
+    }
+
+    .subtitle {
+      width: 80%;
+      font-size: 80%;
+      padding: 5px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+
+      li {
+        padding: 0 4px;
+        text-align: center;
+      }
+    }
+  }
+
+  #section3 {
+    height: fit-content;
+    text-align: center;
+
+    img {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      padding: 10px;
+    }
+
+    .profile {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      overflow: hiiden;
+    }
+
+    .hero {
+      width: 90%;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      overflow: hiiden;
+
+      .image-hero {
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        padding-left: 20px;
+        overflow: hiiden;
+        text-align: center;
+
+        ul {
+          text-align: center;
+        }
+
+        span {
+          text-align: center;
+        }
+
+        .download {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+      }
+
+      .text-hero {
+        width: 100%;
+        height: 100%;
+        padding: 0 0 0 20px;
+        overflow: hiiden;
+        text-align: center;
+        margin-bottom: 1em;
+      }
+    }
+  }
+
   .photo-tab {
     width: 20px;
     top: 120px;
@@ -72,45 +157,7 @@
   #recomended {
     display: block !important;
     height: 100%;
-  }
-
-  #recomended h1 {
-    margin: auto auto;
-    padding: 1.4em 0 0 0;
-    text-align: center;
-    font-size: 50px;
-  }
-
-  #recomended .container {
-    height: 100%;
-    display: block;
-    flex-direction: column;
-    height: fit-content;
-    word-wrap: break-word;
-    flex-wrap: wrap;
-
-    .btns {
-      display: none;
-      flex-direction: row;
-    }
-  }
-
-  #recomended .container .images {
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-
-    .top-img {
-    }
-
-    .mid-img {
-      left: 1em;
-      bottom: 2em;
-    }
-
-    .bottom-img {
-      bottom: 1em;
-    }
+    overflow: hidden !important;
   }
 
   #section2 {
@@ -124,6 +171,28 @@
 
   .contact-container {
     padding: 40px;
+  }
+
+  #recomended .container {
+    width: 100%;
+  }
+
+  #recomended .container .text {
+    width: 100% !important;
+    display: block;
+
+    h3 {
+      width: 100%;
+    }
+  }
+
+  #recomended .container .text > div {
+    width: 100%;
+  }
+
+  #recomended .container .text > div img {
+    display: none;
+    width: 100%;
   }
 }
 
@@ -258,10 +327,57 @@
     z-index: 1;
     position: absolute;
   }
-
   #recomended {
     display: block !important;
     height: 100%;
+  }
+
+  #section3 img {
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  #section3 .profile {
+    margin: 40px auto 4em auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1px 10px 10px 20px;
+    font-size: 90%;
+    flex-direction: column;
+  }
+
+  .hero .image-hero {
+    width: 40%;
+    height: 100%;
+
+    text-align: left;
+    overflow: hidden;
+    height: 100%;
+    font-size: 18px;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+  }
+
+  .hero text-hero {
+    width: 100%;
+    height: auto;
+  }
+
+  #recomended {
+    height: 100vh;
   }
 
   #recomended h1 {
@@ -273,6 +389,7 @@
 
   #recomended .container {
     height: 100%;
+    width: 100%;
     display: block;
     flex-direction: column;
     height: fit-content;
@@ -283,6 +400,14 @@
       display: none;
       flex-direction: row;
     }
+  }
+  #recomended .container .text {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+
+  #recomended .container .text > div {
+    width: 100%;
   }
 
   #recomended .container .images {
@@ -303,12 +428,31 @@
     }
   }
 
-  #section2 {
+  #recomended .container .text > div img {
+    width: 320px;
+    height: 150px;
   }
-  .caption-container {
+
+  .arrows {
+    margin-bottom: 5px;
+    background: rgba(128, 128, 128, 0);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 0px;
+    right: 10px;
+  }
+
+  .next {
+    right: -97%;
+    bottom: 48%;
+    border-radius: 3px 0 0 3px;
+    z-index: 1;
     position: absolute;
-    top: 70%;
-    right: 8em;
-    z-index: 0;
+  }
+
+  .caption-container {
+    display: none;
   }
 }

@@ -1,5 +1,5 @@
-const btn = document.querySelector(".btn");
+const numbers = [12, 15, 34, 67, 65, 75, 87, 100];
 
-btn.addEventListener("mouseover", function () {
-  console.log("eeessss");
+numbers.forEach((element) => {
+  console.log(element);
 });
