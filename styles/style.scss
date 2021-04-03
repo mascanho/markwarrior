@@ -559,6 +559,9 @@ button:hover {
   visibility: hidden;
   width: 100%;
   z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .bounce {
@@ -641,19 +644,24 @@ button:hover {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
 }
-#menu li:hover a {
+#menu li a:hover {
   color: #d3374b;
 }
 
 #menu .main-nav {
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  // top: 50%;
+  // transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #menu .main-nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  width: fit-content;
 }
 #menu .main-nav a {
   color: #fff9fa;
@@ -1446,8 +1454,9 @@ side-tab2.active {
   display: none;
   width: auto;
   height: 85%;
-  max-height: 400px;
-  border: 2px solid grey;
+  max-height: 360px;
+  max-width: 600px;
+
   border-radius: 10px;
   position: relative;
   overflow: hidden;
