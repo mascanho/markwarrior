@@ -1989,6 +1989,7 @@ side-tab2.active {
 #recomended {
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
   background: #262138;
   color: lightgray;
 }
@@ -2008,7 +2009,7 @@ side-tab2.active {
 
 #recomended .container {
   width: 80%;
-  height: 80%;
+  height: 100%;
   padding: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2017,15 +2018,17 @@ side-tab2.active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   margin: auto auto;
 }
 
 #recomended .container .text {
   width: 100%;
-  height: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2040,12 +2043,15 @@ side-tab2.active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
 }
 
 #recomended .container .text > div {
-  width: 100%;
   height: 90%;
   margin: auto;
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -2130,13 +2136,14 @@ side-tab2.active {
   -webkit-transition-property: width, background-color;
   transition-property: width, background-color;
   z-index: 0;
+  margin-bottom: 15px;
 }
 
 .skillbar-title {
   position: absolute;
   top: 0;
   left: 0;
-  width: 110px;
+  width: auto;
   font-weight: bold;
   font-size: 13px;
   color: #ffffff;
