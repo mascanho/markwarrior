@@ -1,5 +1,12 @@
-const numbers = [12, 15, 34, 67, 65, 75, 87, 100];
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+  greeting() {
+    return "hello there";
+  }
+}
 
-numbers.forEach((element) => {
-  console.log(element);
-});
+const mary = new Person("mary", "poppins");
+console.log(mary);
