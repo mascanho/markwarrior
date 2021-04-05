@@ -1,5 +1,21 @@
 /* Portrait */
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+  html,
+  body {
+    overflow-x: none;
+    background-size: cover;
+    background-size: 100% 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-size: 100% 100%;
+    background-color: #0000002f;
+    background-blend-mode: multiply;
+    background: #464646 url(/images/99886.png) no-repeat center center;
+    background-size: cover;
+  }
+
   .modal {
     width: 90%;
   }
@@ -46,7 +62,7 @@
     }
 
     .hero {
-      width: 90%;
+      width: 95%;
       flex-direction: column;
       justify-content: center;
       height: 100%;
@@ -71,6 +87,8 @@
         .download {
           text-align: center;
           margin-bottom: 20px;
+          margin-top: 10px;
+          margin-bottom: 1em;
         }
       }
 
@@ -96,6 +114,7 @@
     right: 0;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    display: none;
   }
   .modal2 {
     width: 90%;
@@ -147,7 +166,7 @@
   }
 
   .next {
-    right: -95%;
+    right: 0%;
     bottom: 48%;
     border-radius: 3px 0 0 3px;
     z-index: 1;
@@ -156,8 +175,7 @@
 
   #recomended {
     display: block !important;
-    height: 100%;
-    overflow: hidden !important;
+    height: fit-content;
   }
 
   #section2 {
@@ -199,6 +217,18 @@
 /* ----------- iPhone X ----------- */
 /* Portrait */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+  html,
+  body {
+    overflow-x: none;
+    background-size: cover;
+    background-size: 100% 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-size: 100% 100%;
+  }
+
   .mySlides {
     display: none;
     width: auto;
@@ -237,7 +267,7 @@
 
   #recomended {
     display: block !important;
-    height: 100%;
+    height: fit-content;
   }
 
   #recomended h1 {
@@ -292,6 +322,11 @@
 /* ----------- iPad 3, 4 and Pro 9.7" ----------- */
 /* Portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  body {
+    background: #464646 url(images/background-photo.jpg) no-repeat center center;
+    background-size: cover;
+  }
+
   .mySlides {
     display: none;
     width: auto;
@@ -321,7 +356,7 @@
   }
 
   .next {
-    right: -95%;
+    right: 0%;
     bottom: 48%;
     border-radius: 3px 0 0 3px;
     z-index: 1;

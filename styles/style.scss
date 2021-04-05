@@ -290,7 +290,7 @@ $main-color: #d4334b;
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: none !important;
 }
 
 body {
@@ -305,11 +305,17 @@ body {
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
+  overflow-x: hidden !important;
+  height: 100vh;
 
   // overflow-x: hidden;
   padding: 0px;
   margin: 0px;
   letter-spacing: 1.2px;
+}
+
+#hidden-emoji {
+  display: none;
 }
 
 a {
@@ -853,6 +859,7 @@ button:hover {
   align-items: center;
   color: white;
   z-index: 0;
+  overflow: hidden;
 
   h1 {
     font-size: 680%;
@@ -897,9 +904,9 @@ button:hover {
     text-orientation: sideways-right;
     text-transform: uppercase;
     position: absolute;
-    bottom: 30px;
+    bottom: 15px;
     left: 25px;
-    font-size: 120%;
+    font-size: 100%;
     color: grey;
 
     span {
@@ -938,10 +945,10 @@ button:hover {
     overflow: hidden;
     height: 100%;
     font-size: 18px;
-    margin: auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
 
     ul {
       margin-top: 0px !important;
@@ -950,7 +957,7 @@ button:hover {
   }
 
   .text-hero {
-    width: 50%;
+    width: 70%;
     max-width: 800px;
     padding: 0 10% 0 0;
     text-align: left;
@@ -972,6 +979,7 @@ button:hover {
   display: block;
   text-align: center;
   position: relative;
+  overflow: hidden;
 
   h1 {
     padding: 1.5em 0 5px 0;
@@ -1005,6 +1013,7 @@ button:hover {
   overflow-x: hidden;
   background-color: rgb(255, 255, 255);
   text-align: center;
+  overflow: hidden;
 
   .profile {
     margin: 20px auto 2em auto;
@@ -1084,6 +1093,7 @@ button:hover {
   .download {
     text-align: left;
     width: 100%;
+    margin-top: 20%;
   }
 
   .download span {
@@ -1116,6 +1126,7 @@ button:hover {
   align-items: center;
   color: black;
   background-color: white;
+  overflow: hidden;
 
   h1 {
     text-align: center;
@@ -1128,6 +1139,7 @@ button:hover {
   align-items: center;
   color: black;
   background-color: white;
+  overflow: hidden;
 
   h1 {
     text-align: center;
@@ -1199,7 +1211,7 @@ side-tab2.active {
 #recomended {
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: auto;
   background: #262138;
   color: lightgray;
 
@@ -1217,9 +1229,9 @@ side-tab2.active {
   }
 
   .container {
-    width: 80%;
+    width: auto;
     height: 100%;
-    padding: 1em;
+    padding: 2em;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

@@ -6,6 +6,10 @@ class Person {
   greeting() {
     return "hello there";
   }
+
+  static addNumbers(x, y) {
+    return x * y;
+  }
 }
 
 const mary = new Person("mary", "poppins");

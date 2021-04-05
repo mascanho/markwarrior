@@ -2,6 +2,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
 /* Portrait */
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+  html,
+  body {
+    overflow-x: none;
+    background-size: cover;
+    background-size: 100% 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-size: 100% 100%;
+    background-color: #0000002f;
+    background-blend-mode: multiply;
+    background: #464646 url(/images/99886.png) no-repeat center center;
+    background-size: cover;
+  }
   .modal {
     width: 90%;
   }
@@ -52,7 +67,7 @@
     overflow: hiiden;
   }
   #section3 .hero {
-    width: 90%;
+    width: 95%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -82,6 +97,8 @@
   #section3 .hero .image-hero .download {
     text-align: center;
     margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 1em;
   }
   #section3 .hero .text-hero {
     width: 100%;
@@ -101,6 +118,7 @@
     right: 0;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    display: none;
   }
   .modal2 {
     width: 90%;
@@ -154,7 +172,7 @@
     z-index: 1;
   }
   .next {
-    right: -95%;
+    right: 0%;
     bottom: 48%;
     border-radius: 3px 0 0 3px;
     z-index: 1;
@@ -162,8 +180,9 @@
   }
   #recomended {
     display: block !important;
-    height: 100%;
-    overflow: hidden !important;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .caption-container {
     position: absolute;
@@ -196,6 +215,17 @@
 /* ----------- iPhone X ----------- */
 /* Portrait */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+  html,
+  body {
+    overflow-x: none;
+    background-size: cover;
+    background-size: 100% 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-size: 100% 100%;
+  }
   .mySlides {
     display: none;
     width: auto;
@@ -232,7 +262,9 @@
   }
   #recomended {
     display: block !important;
-    height: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   #recomended h1 {
     margin: auto auto;
@@ -289,6 +321,10 @@
 /* ----------- iPad 3, 4 and Pro 9.7" ----------- */
 /* Portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  body {
+    background: #464646 url(images/background-photo.jpg) no-repeat center center;
+    background-size: cover;
+  }
   .mySlides {
     display: none;
     width: auto;
@@ -317,7 +353,7 @@
     z-index: 1;
   }
   .next {
-    right: -95%;
+    right: 0%;
     bottom: 48%;
     border-radius: 3px 0 0 3px;
     z-index: 1;
@@ -754,7 +790,7 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: none !important;
 }
 
 body {
@@ -769,9 +805,15 @@ body {
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
+  overflow-x: hidden !important;
+  height: 100vh;
   padding: 0px;
   margin: 0px;
   letter-spacing: 1.2px;
+}
+
+#hidden-emoji {
+  display: none;
 }
 
 a {
@@ -1584,6 +1626,7 @@ button:hover {
           align-items: center;
   color: white;
   z-index: 0;
+  overflow: hidden;
 }
 
 #section1 h1 {
@@ -1633,9 +1676,9 @@ button:hover {
   text-orientation: sideways-right;
   text-transform: uppercase;
   position: absolute;
-  bottom: 30px;
+  bottom: 15px;
   left: 25px;
-  font-size: 120%;
+  font-size: 100%;
   color: grey;
 }
 
@@ -1680,7 +1723,7 @@ button:hover {
   overflow: hidden;
   height: 100%;
   font-size: 18px;
-  margin: auto;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1688,9 +1731,9 @@ button:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .hero .image-hero ul {
@@ -1699,7 +1742,7 @@ button:hover {
 }
 
 .hero .text-hero {
-  width: 50%;
+  width: 70%;
   max-width: 800px;
   padding: 0 10% 0 0;
   text-align: left;
@@ -1724,6 +1767,7 @@ button:hover {
   display: block;
   text-align: center;
   position: relative;
+  overflow: hidden;
 }
 
 #section2 h1 {
@@ -1760,6 +1804,7 @@ button:hover {
   overflow-x: hidden;
   background-color: white;
   text-align: center;
+  overflow: hidden;
 }
 
 #section3 .profile {
@@ -1851,6 +1896,7 @@ button:hover {
 #section3 .download {
   text-align: left;
   width: 100%;
+  margin-top: 20%;
 }
 
 #section3 .download span {
@@ -1883,6 +1929,7 @@ button:hover {
           align-items: center;
   color: black;
   background-color: white;
+  overflow: hidden;
 }
 
 #section4 h1 {
@@ -1897,6 +1944,7 @@ button:hover {
           align-items: center;
   color: black;
   background-color: white;
+  overflow: hidden;
 }
 
 #section5 h1 {
@@ -1989,7 +2037,7 @@ side-tab2.active {
 #recomended {
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
+  overflow: auto;
   background: #262138;
   color: lightgray;
 }
@@ -2008,9 +2056,9 @@ side-tab2.active {
 }
 
 #recomended .container {
-  width: 80%;
+  width: auto;
   height: 100%;
-  padding: 1em;
+  padding: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
