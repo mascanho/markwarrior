@@ -193,6 +193,9 @@
   .contact-container {
     padding: 40px;
   }
+  #contact {
+    display: none;
+  }
   #recomended .container {
     width: 100%;
   }
