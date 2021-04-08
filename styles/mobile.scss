@@ -176,6 +176,21 @@
   #recomended {
     display: block !important;
     height: fit-content;
+
+    .container {
+      margin-top: 0.4em;
+      margin-bottom: 1em;
+    }
+  }
+
+  #recomended .container .text button {
+    width: 150px;
+    background: #d3374b;
+    color: lightgray;
+    margin-top: 1em;
+    padding: 10px;
+    font-size: 90%;
+    text-align: center;
   }
 
   #section2 {
@@ -202,6 +217,7 @@
   #recomended .container .text {
     width: 100% !important;
     display: block;
+    text-align: center;
 
     h3 {
       width: 100%;

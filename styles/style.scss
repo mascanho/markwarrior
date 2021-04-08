@@ -979,7 +979,7 @@ button:hover {
   display: block;
   text-align: center;
   position: relative;
-  overflow: hidden;
+  overflow: auto;
 
   h1 {
     padding: 1.5em 0 5px 0;
@@ -1013,7 +1013,7 @@ button:hover {
   overflow-x: hidden;
   background-color: rgb(255, 255, 255);
   text-align: center;
-  overflow: hidden;
+  overflow: auto;
 
   .profile {
     margin: 20px auto 2em auto;
@@ -1214,6 +1214,7 @@ side-tab2.active {
   overflow: auto;
   background: #262138;
   color: lightgray;
+  overflow-y: auto;
 
   img {
     width: 50%;
@@ -1230,12 +1231,12 @@ side-tab2.active {
 
   .container {
     width: auto;
-    height: 100%;
+    height: fit-content;
     padding: 2em;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: auto auto;
+    margin: 3em auto auto auto;
 
     .text {
       width: 100%;
@@ -1252,6 +1253,7 @@ side-tab2.active {
         margin: auto;
         flex-shrink: 2;
         flex-wrap: wrap;
+        width: 60%;
 
         img {
           margin: 2.5em auto;

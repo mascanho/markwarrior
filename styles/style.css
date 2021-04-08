@@ -12,9 +12,9 @@
     min-height: 100vh;
     min-width: 100vw;
     background-size: 100% 100%;
-    background-color: #0000001c;
-    background-blend-mode: normal;
-    background: #464646 url(/images/99886.png) no-repeat center center;
+    background-color: #00000000;
+    background-blend-mode: darken;
+    background: #00000071 url(/images/99886.png) no-repeat center center;
     background-size: cover;
   }
   .modal {
@@ -1790,7 +1790,7 @@ button:hover {
   display: block;
   text-align: center;
   position: relative;
-  overflow: hidden;
+  overflow: auto;
 }
 
 #section2 h1 {
@@ -1827,7 +1827,7 @@ button:hover {
   overflow-x: hidden;
   background-color: white;
   text-align: center;
-  overflow: hidden;
+  overflow: auto;
 }
 
 #section3 .profile {
@@ -2063,6 +2063,7 @@ side-tab2.active {
   overflow: auto;
   background: #262138;
   color: lightgray;
+  overflow-y: auto;
 }
 
 #recomended img {
@@ -2080,7 +2081,9 @@ side-tab2.active {
 
 #recomended .container {
   width: auto;
-  height: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   padding: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2092,7 +2095,7 @@ side-tab2.active {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin: auto auto;
+  margin: 3em auto auto auto;
 }
 
 #recomended .container .text {
@@ -2125,6 +2128,7 @@ side-tab2.active {
       flex-shrink: 2;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  width: 60%;
 }
 
 #recomended .container .text > div img {
