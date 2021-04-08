@@ -12,8 +12,8 @@
     min-height: 100vh;
     min-width: 100vw;
     background-size: 100% 100%;
-    background-color: #0000002f;
-    background-blend-mode: multiply;
+    background-color: #0000001c;
+    background-blend-mode: normal;
     background: #464646 url(/images/99886.png) no-repeat center center;
     background-size: cover;
   }
