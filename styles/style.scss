@@ -1829,12 +1829,14 @@ span i {
 
 footer {
   width: 100%;
-  height: 3.5%;
+  height: 3%;
   background: rgb(8, 23, 53);
   position: relative;
   bottom: 0px;
   margin: 0;
   padding: 0;
+  display: flex;
+  align-items: center;
 }
 
 .contact-span {
@@ -1852,10 +1854,11 @@ footer ul {
   li {
     margin: auto;
     text-align: center;
-    padding: 14px 0;
+    padding: 0 0;
     color: rgba(255, 255, 255, 0.781);
     font-weight: 700;
     font-shadow: 2px 2px 5px white;
+    align-items: center;
 
     img {
       width: 20px;
