@@ -1,5 +1,151 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+@media only screen and (max-device-width: 414px) and (orientation: portrait) {
+  #section1 h1 {
+    font-size: 280% !important;
+    text-shadow: 2px 2px 10px black;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    padding: 0;
+    margin: 0;
+  }
+  .vertical {
+    left: 5px;
+  }
+  #section1 ul {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 12px;
+    margin-top: -20px;
+    font-shadow: 1px 1px 10px black;
+    color: rgba(255, 255, 255, 0.822);
+    text-transform: uppercase;
+  }
+  #section1 ul li {
+    margin: 0;
+    padding: 2px;
+  }
+  #section3 {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    text-align: center;
+  }
+  #section3 img {
+    margin-bottom: 20px;
+  }
+  #section3 h2 {
+    padding: 10px;
+  }
+  #section3 .profile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    width: 100%;
+    overflow: hiiden;
+  }
+  #section3 .hero {
+    width: 95%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    overflow: hiiden;
+  }
+  #section3 .hero .image-hero {
+    width: 100%;
+    height: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 20px;
+    overflow: hiiden;
+    text-align: center;
+  }
+  #section3 .hero .image-hero ul {
+    text-align: center;
+  }
+  #section3 .hero .image-hero span {
+    text-align: center;
+  }
+  #section3 .hero .image-hero .download {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 1em;
+  }
+  #section3 .hero .text-hero {
+    width: 100%;
+    height: 100%;
+    padding: 0 0 0 20px;
+    overflow: hiiden;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .modal2 {
+    width: 95%;
+  }
+  .mySlides {
+    height: auto;
+  }
+  #section2 {
+    overflow: hidden;
+  }
+  #recomended {
+    overflow: hidden;
+    height: auto;
+    margin: 0;
+    text-align: center;
+  }
+  #recomended .container {
+    overflow: hidden;
+    margin: 0 0 4em 0;
+  }
+  #recomended .container .text > div h3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 300px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    line-height: 25px;
+  }
+  #recomended .container .text > div img {
+    display: none;
+  }
+  #recomended .container .text > div {
+    width: 100%;
+  }
+  .container h2 {
+    font-size: 2em;
+  }
+  .app-title span {
+    font-size: 14px;
+  }
+  .caption-container {
+    display: none;
+  }
+  .modal {
+    width: 98%;
+  }
+}
+
 /* Portrait */
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
   html,
@@ -184,6 +330,19 @@
     height: -moz-fit-content;
     height: fit-content;
   }
+  #recomended .container {
+    margin-top: 0.4em;
+    margin-bottom: 1em;
+  }
+  #recomended .container .text button {
+    width: 150px;
+    background: #d3374b;
+    color: lightgray;
+    margin-top: 1em;
+    padding: 10px;
+    font-size: 90%;
+    text-align: center;
+  }
   .caption-container {
     position: absolute;
     top: 70%;
@@ -202,6 +361,7 @@
   #recomended .container .text {
     width: 100% !important;
     display: block;
+    text-align: center;
   }
   #recomended .container .text h3 {
     width: 100%;
@@ -509,6 +669,37 @@
   }
 }
 
+* {
+  border: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: none !important;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  opacity: 1;
+  background-color: #00000071;
+  background-blend-mode: multiply;
+  background-image: url("/images/99886.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  overflow-x: hidden !important;
+  height: 100vh;
+  padding: 0px;
+  margin: 0px;
+  letter-spacing: 1.2px;
+}
+
 #preload-container {
   width: 100vw;
   height: 100vh;
@@ -802,37 +993,6 @@
   h2 {
     font-size: 1.5rem;
   }
-}
-
-* {
-  border: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  overflow-x: none !important;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  font-size: 13px;
-  font-weight: 300;
-  opacity: 1;
-  background-color: #00000071;
-  background-blend-mode: multiply;
-  background-image: url("/images/99886.png");
-  background-repeat: repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
-  overflow-x: hidden !important;
-  height: 100vh;
-  padding: 0px;
-  margin: 0px;
-  letter-spacing: 1.2px;
 }
 
 #hidden-emoji {

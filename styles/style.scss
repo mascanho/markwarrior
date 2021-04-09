@@ -4,6 +4,38 @@
 
 $main-color: #d4334b;
 
+* {
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: none !important;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  opacity: 1;
+  background-color: #00000071;
+  background-blend-mode: multiply;
+  background-image: url("/images/99886.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  overflow-x: hidden !important;
+  height: 100vh;
+
+  // overflow-x: hidden;
+  padding: 0px;
+  margin: 0px;
+  letter-spacing: 1.2px;
+}
+
 // PRE LOADER
 #preload-container {
   width: 100vw;
@@ -281,38 +313,6 @@ $main-color: #d4334b;
   }
 }
 // End of Type Writter
-
-* {
-  border: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  overflow-x: none !important;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  font-size: 13px;
-  font-weight: 300;
-  opacity: 1;
-  background-color: #00000071;
-  background-blend-mode: multiply;
-  background-image: url("/images/99886.png");
-  background-repeat: repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
-  overflow-x: hidden !important;
-  height: 100vh;
-
-  // overflow-x: hidden;
-  padding: 0px;
-  margin: 0px;
-  letter-spacing: 1.2px;
-}
 
 #hidden-emoji {
   display: none;
