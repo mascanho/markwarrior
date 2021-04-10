@@ -20,9 +20,6 @@ echo "Thank You!";
 ?>
 
 <a href="http://markwarrior.com">Back to Page</a>
-<script>
-    alert('Es uma joia gatinho!!!!')
-</script>
 
 </body>
 </html>
