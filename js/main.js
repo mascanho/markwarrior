@@ -1,3 +1,28 @@
+AOS.init();
+
+// You can also pass an optional settings object
+// below listed default settings
+AOS.init({
+  // Global settings:
+  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: "aos-init", // class applied after initialization
+  animatedClassName: "aos-animate", // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 120, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 400, // values from 0 to 3000, with step 50ms
+  easing: "ease", // default easing for AOS animations
+  once: false, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+  anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+});
+
 // PRELOADER
 
 window.onload = () => {
@@ -31,27 +56,6 @@ window.scrollBy({
 // document.querySelector(".hello").scrollIntoView({
 //   behavior: "smooth",
 // });
-
-// From the top
-gsap.from("em,.sticky-socials", {
-  opacity: 0,
-  duration: 1,
-  y: -1000,
-});
-
-//From the side
-gsap.from(".anime", {
-  opacity: 0,
-  duration: 1,
-  y: 1000,
-});
-
-//from the bottom
-gsap.from(".animation", {
-  opacity: 0,
-  duration: 1,
-  x: 1000,
-});
 
 // Section Arrow scroll
 const arrows = document.querySelector(".arrows");
@@ -101,13 +105,11 @@ function scrollFunction() {
   }
 
   //TOP
-  if (someElement.getBoundingClientRect().top >= 0) {
-    console.log("TRIGGER: top of div reached.");
-  }
+
   //BOTTOM
-  if (someElement.getBoundingClientRect().bottom <= 0) {
-    console.log("TRIGGER: bottom of div reached.");
-  }
+  // if (someElement.getBoundingClientRect().bottom <= 0) {
+  //   console.log("TRIGGER: bottom of div reached.");
+  // }
 }
 
 // Skill Bars
@@ -185,7 +187,6 @@ function plusSlides(n) {
       }, 5000);
     }
   }
-  console.log(slideIndex);
 }
 
 function currentSlide(n) {
@@ -226,7 +227,7 @@ const urlAPI = "https://api.chucknorris.io/jokes/random";
 async function chuckFacts() {
   const res = await fetch(urlAPI);
   const data = await res.json();
-  console.log(data.value);
+
   footerQuote.textContent = data.value;
 }
 chuckFacts();
@@ -251,7 +252,6 @@ const closeModal = (e) => {
 
 window.addEventListener("click", (e) => {
   if (e.target === modal) {
-    console.log("click");
   } else {
     overlay.classList.remove("active");
   }
@@ -270,8 +270,6 @@ closeBtn.addEventListener("click", closeModal);
 const input = document.querySelector(".contact-container");
 const submit = document.querySelector(".app-form-button");
 const elementsFadeOut = document.querySelectorAll(".fading");
-
-console.log(elementsFadeOut);
 
 const observer = new IntersectionObserver(
   function (entries) {
@@ -386,9 +384,6 @@ async function getFamousQuotes() {
   const res = await fetch(urlFamous);
   const data = await res.json();
   let randomNum = Math.floor(Math.random() * 9) + 1;
-  console.log(randomNum);
-  console.log(data.data[randomNum].quoteAuthor);
-  console.log(data.data[randomNum].quoteText);
 
   document.querySelector(".famous-quote").innerHTML = `
   <h4><em>"${data.data[randomNum].quoteText}"</em></h4>
@@ -416,8 +411,6 @@ function showError(input, message) {
 
 // Event listeners
 form.addEventListener("submit", function (e) {
-  console.log("submit");
-
   if (formName.value === "") {
     terminal.classList.toggle("vibrate-terminal");
     nameError.classList.add("error");
@@ -451,9 +444,18 @@ form.addEventListener("submit", function (e) {
       messageError.classList.remove("error");
     }, 2000);
 
-    console.log("no input");
     e.preventDefault();
   }
 });
 
-console.log(messageError.value);
+console.log(
+  `%c ________________________________________
+< mooooooooooooooooooooooooooooooooooooo >
+ ----------------------------------------
+        \\   ^__^
+         \\  (oo)\\_______
+            (__)\\       )\\/\\
+                ||----w |
+                ||     ||`,
+  "font-family:monospace"
+);

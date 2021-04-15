@@ -9,6 +9,24 @@
     padding: 0;
     margin: 0;
   }
+  .container {
+    width: auto;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 0;
+  }
 }
 
 @media only screen and (max-device-width: 414px) {
@@ -37,6 +55,10 @@
   #section1 ul li {
     margin: 0;
     padding: 2px;
+  }
+  #section2 h1 {
+    margin: auto;
+    text-align: center;
   }
   #section3 {
     height: -webkit-fit-content;
@@ -123,8 +145,35 @@
     text-align: center;
   }
   #recomended .container {
+    padding: 0;
+  }
+  #recomended .container {
     overflow: hidden;
     margin: 0 0 4em 0;
+  }
+  #recomended .container .text {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1em;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-negative: 2;
+    flex-shrink: 2;
+    padding: 0 30px;
+    margin-top: 2em;
   }
   #recomended .container .text > div h3 {
     display: -webkit-box;
@@ -573,9 +622,26 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .hero {
+    padding: 0;
+  }
+  .hero .text-hero {
+    width: 50%;
+    max-width: 600px;
+    padding-right: 2em !important;
+    text-align: left;
+    height: 100%;
+    font-size: 18px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    overflow: hidden;
+    z-index: 0;
+    margin: auto;
+  }
   .hero .image-hero {
     width: 40%;
     height: 100%;
+    padding-left: 2em;
     text-align: left;
     overflow: hidden;
     height: 100%;
@@ -590,6 +656,13 @@
     flex-direction: column;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
+  }
+  .hero .text-hero {
+    padding: 0;
+  }
+  .hero .image-hero ul {
+    margin-top: 0px !important;
+    margin-bottom: 13px !important;
   }
   .hero text-hero {
     width: 100%;
@@ -606,7 +679,6 @@
   }
   #recomended .container {
     height: 100%;
-    width: 100%;
     display: block;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -618,6 +690,7 @@
     word-wrap: break-word;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    margin: 0;
   }
   #recomended .container .btns {
     display: none;
