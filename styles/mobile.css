@@ -441,6 +441,8 @@
   }
   #recomended .container .text > div {
     width: 100%;
+    margin: 30px auto;
+    padding: 0 25px;
   }
   #recomended .container .text > div img {
     display: none;
