@@ -450,8 +450,7 @@ form.addEventListener("submit", function (e) {
 
 console.log(
   `%c ________________________________________
-< Built with love and affection!
-You can get this source code from my github page. >
+< Howdy, Hope you are not stealing code! :)  >
  ----------------------------------------
         \\   ^__^
          \\  (oo)\\_______
