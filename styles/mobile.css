@@ -27,6 +27,19 @@
             justify-content: flex-start;
     padding: 0;
   }
+  #section1 .vertical-text .vertical {
+    -webkit-writing-mode: vertical-rl !important;
+    -ms-writing-mode: tb-rl !important;
+    writing-mode: vertical-rl !important;
+    letter-spacing: 10px;
+    text-orientation: sideways-right;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    font-size: 100%;
+    color: grey;
+  }
 }
 
 @media only screen and (max-device-width: 414px) {
