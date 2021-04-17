@@ -3117,7 +3117,9 @@ footer ul i {
 }
 
 .modal {
-  width: 50%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: auto;
   background: white;
   padding: 20px;
@@ -3192,7 +3194,7 @@ aside {
 .modal2 {
   border: 1px solid #a3a3a3;
   position: fixed;
-  width: 470px;
+  width: 480px;
   background: -webkit-gradient(linear, left top, right top, from(#00646de5), to(#02338f));
   background: linear-gradient(to right, #00646de5 0%, #02338f 100%);
   border-radius: 5px;
