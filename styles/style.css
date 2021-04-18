@@ -2681,7 +2681,7 @@ side-tab2.active {
    -ms-user-select: none;
        user-select: none;
   -webkit-user-select: none;
-  z-index: 1;
+  z-index: 0;
   margin: auto auto;
 }
 
@@ -2690,7 +2690,7 @@ side-tab2.active {
   right: -110%;
   border-radius: 3px 0 0 3px;
   bottom: 48%;
-  z-index: 1;
+  z-index: 0;
   position: absolute;
 }
 
