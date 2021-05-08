@@ -29,7 +29,7 @@ window.onload = () => {
   setTimeout(() => {
     document.querySelector(".loader").style.opacity = "0";
     document.querySelector(".loader").style.display = "none";
-  }, 2000);
+  }, 1500);
 };
 
 // NAVBAR initAnimation
@@ -151,75 +151,6 @@ jQuery(document).ready(function () {
 
 // Image Gallery
 const gallery = document.querySelectorAll(".mySlides");
-const photoCaption = document.querySelector("#caption");
-var slideIndex = 0;
-showSlides(slideIndex);
-
-captionText = gallery[slideIndex - 1].firstElementChild.dataset.title;
-photoCaption.style.opacity = "1";
-photoCaption.innerHTML = `<span>&#128248; </span> ${captionText}`;
-
-function plusSlides(n) {
-  document.querySelector("#section2").style.background = "black";
-  document.querySelector("#section2").firstElementChild.style.opacity = "0";
-  document.querySelector(".caption-container").style.opacity = "1";
-  showSlides((slideIndex += n));
-  let captionText = gallery[slideIndex - 1].firstElementChild.dataset.title;
-  photoCaption.textContent = captionText;
-  photoCaption.style.opacity = "0";
-  photoCaption.style.opacity = "1";
-
-  photoCaption.innerHTML = ` 
-      
-      <p id="caption"><span>&#128248; </span>${captionText}</p>
-      
-  `;
-  if (slideIndex === 19) {
-    document.querySelector("#section2").style.background =
-      "linear-gradient(to right, #474747 0%, #212149 100%)";
-    document.querySelector("#section2").firstElementChild.style.opacity = "1";
-    document.querySelector(".caption-container").style.opacity = "0";
-    modal2.style.display = "block";
-
-    if ((modal2.style.display = "block")) {
-      setTimeout(() => {
-        modal2.style.display = "none";
-      }, 5000);
-    }
-  }
-}
-
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-
-// gallery.forEach((item, index) => {
-//   console.dir(item.childNodes[1].attributes[1].value);
-//   const data = item.childNodes[1].attributes[1].value;
-//   photoCaption.textContent = slideIndex.value;
-// });
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-
-  var captionText = document.getElementById("caption");
-
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  slides[slideIndex - 1].style.display = "block";
-
-  // dots[slideIndex - 1].className += " active";
-  // captionText.innerHTML = dots[slideIndex - 1].alt;
-}
 
 // FOOTER with CHUCK QUOTE
 const urlAPI = "https://api.chucknorris.io/jokes/random";
@@ -339,39 +270,16 @@ class TypeWritter {
 }
 
 // Init on DOM  Load
-document.addEventListener("DOMContentLoaded", init);
+// document.addEventListener("DOMContentLoaded", init);
 
 // Init App
-function init() {
-  const txtElement = document.querySelector(".txt-type");
-  const words = JSON.parse(txtElement.getAttribute("data-words"));
-  const wait = txtElement.getAttribute("data-wait");
-  // Init TypeWritter
-  new TypeWritter(txtElement, words, wait);
-}
-
-// Tabs for the Image gallery
-const galleryContainer = document.querySelector("#gallery");
-const tabPhoto = document.querySelector(".photo-tab");
-const tabVideo = document.querySelector(".video-tab");
-const videoGallery = document.querySelector(".video-container");
-
-function openPhotoTab() {
-  tabVideo.style.boxShadow = "0px 0px 0px black";
-  tabPhoto.style.boxShadow = "1px 1px 10px #d3374b";
-  videoGallery.style.display = "none";
-  galleryContainer.style.display = "flex";
-}
-
-function openVideoTab() {
-  tabPhoto.style.boxShadow = "0px 0px 0px black";
-  tabVideo.style.boxShadow = "1px 1px 10px #d3374b";
-  galleryContainer.style.display = "none";
-  videoGallery.style.display = "block";
-}
-
-tabVideo.addEventListener("click", openVideoTab);
-tabPhoto.addEventListener("click", openPhotoTab);
+// function init() {
+// const txtElement = document.querySelector(".txt-type");
+// const words = JSON.parse(txtElement.getAttribute("data-words"));
+// const wait = txtElement.getAttribute("data-wait");
+// Init TypeWritter
+// new TypeWritter(txtElement, words, wait);
+// }
 
 // Famous Quotes on the loader
 
@@ -459,3 +367,26 @@ console.log(
                 ||     ||`,
   "font-family:monospace"
 );
+
+// PORTFOLIO TABS
+const tabs = document.querySelector(".tabs"),
+  ulContainer = document.querySelector(".ul__container"),
+  photoTab = document.querySelector(".photo__tab"),
+  videoTab = document.querySelector(".video__tab"),
+  videoContent = document.querySelector("#videos"),
+  fotorama = document.querySelector(".fotorama");
+websitesTab = document.querySelector(".websites__tab");
+
+photoTab.style.borderBottom = "2px solid #d4334b";
+
+videoTab.addEventListener("click", () => {
+  if (videoContent.classList.contains("active") === false) {
+    fotorama.style.display = "none";
+    videoContent.classList.toggle("active");
+    photoTab.style.borderBottom = "";
+    videoTab.style.borderBottom = "2px solid #d4334b";
+    videoTab.style.color = "#d4334b";
+  } else {
+    return;
+  }
+});

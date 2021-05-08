@@ -17,6 +17,12 @@
       integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
       crossorigin="anonymous"
     />
+    <!-- jQuery 1.8 or later, 33 KB -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- Fotorama from CDNJS, 19 KB -->
+<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
       integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
@@ -396,102 +402,55 @@
     
       <div class="container" data-aos="fade-left">
         <h1>My Portfolio</h1>
-        <h2><span class="txt-type" data-wait="3000" data-words='["Photography","Videography", "Randomness"]'></span></h1>
+        <!-- <h2><span class="txt-type" data-wait="3000" data-words='["Photography","Videography", "Randomness"]'></span></h1> -->
           </div>
-                      <div data-aos="fade-right">
 
-                          <div id="gallery" class="gallery-container data-aos="fade-left">
-                           
-                            <div class="mySlides" data-aos="fade-right">
-                              <div data-photo="1" data-title="Advertising" class="numbertext"></div>
-                              <img src="./images/Portfolio/4.jpg">
-                            </div>
-                            <div class="mySlides">
-                              <div data-photo="2" data-title="Advertising" class="numbertext"></div>
-                              <img src="./images/Portfolio/7.jpg">
-                            </div>
-                            
-                            <div class="mySlides">
-                              <div data-photo="3" data-title="Surreal" class="numbertext"></div>
-                              <img src="./images/Portfolio/12.jpg">
-                            </div>
-                            <div class="mySlides">
-                              <div data-photo="4" data-title="Conceptual" class="numbertext"></div>
-                              <img src="./images/Portfolio/13.jpg">
-                            </div>
-                            <div class="mySlides">
-                              <div data-photo="5" data-title="Advertising" class="numbertext"></div>
-                              <img src="./images/Portfolio/15.jpg">
-                            </div>
-                            <div class="mySlides">
-                              <div data-photo="6" data-title="Conceptual" class="numbertext"></div>
-                              <img src="./images/Portfolio/14.jpg">
-                            </div>
-                            <div class="mySlides">
-                              <div data-photo="7" data-title="Music" class="numbertext"></div>
-                              <img src="./images/Portfolio/18.jpg">
-                            </div>
-                            <div class="mySlides">
-                              <div data-photo="8" data-title="Conceptual" class="numbertext"></div>
-                              <img src="./images/Portfolio/umbrella.jpg">
-                            </div>
-                            <div class="mySlides">
-                              <div data-photo="9" data-title="Conceptual" class="numbertext"></div>
-                              <img src="./images/Portfolio/bazooka.jpg">
-                            </div>
-                            <div class="mySlides">
-                              <div data-photo="10" data-title="Conceptual" class="numbertext"></div>
-                              <img src="./images/Portfolio/donkey.jpg">
-                            </div>
-                            <div class="mySlides">
-                              <div data-photo="11" data-title="Conceptual" class="numbertext"></div>
-                              <img src="./images/Portfolio/tv.jpg">
-                            </div>
-                            <div class="mySlides">
-                              <div data-photo="12" data-title="Conceptual" class="numbertext"></div>
-                              <img src="./images/Portfolio/city.jpg">
-                            </div>
-                            <div class="mySlides">
-                              <div data-photo="13" data-title="Conceptual" class="numbertext"></div>
-                              <img src="./images/Portfolio/cloud.jpg">
-                            </div>
-                            <div class="mySlides">
-                              <div data-photo="14" data-title="Conceptual" class="numbertext"></div>
-                              <img src="./images/Portfolio/keys.jpg">
-                            </div>
-                            <div class="mySlides">
-                              <div data-photo="15" data-title="Conceptual" class="numbertext"></div>
-                              <img src="./images/Portfolio/jump.jpg">
-                            </div>
-                            <div class="mySlides">
-                              <div data-photo="16" data-title="Conceptual" class="numbertext"></div>
-                              <img src="./images/Portfolio/angel.jpg">
-                            </div>
-                            <div class="mySlides">
-                              <div data-photo="17" data-title="Conceptual" class="numbertext"></div>
-                              <img src="./images/Portfolio/stereo.jpg">
-                            </div>
-                            <div class="mySlides">
-                              <div data-photo="18" data-title="Conceptual" class="numbertext"></div>
-                              <img src="./images/Portfolio/snowing.jpg">
-                            </div>
-                            <div class="mySlides">
-                              <div data-photo="8" data-title="Surreal" class="numbertext"></div>
-                              <img src="./images/Portfolio/8.jpg">
-                            </div>
-                    
+          <div id="gallery__container" data-aos="fade-right">
+          <div class="tabs">
+            <ul class='ul__container'>
+              <li class='photo__tab'>Photos</li>
+              <li class='video__tab'>Videos</li>
+              <li class="websites__tab">Websites</li>
+            </ul>
+          </div>
 
-                            
-                              
-                            <a class="prev" onclick="plusSlides(-1)">❮</a>
-                            <a class="next" onclick="plusSlides(1)">❯</a>
 
-                            <div class="caption-container">
-                              <p id="caption">Name Here</p>
-                            </div>
-                          </div>     
+          <div id="videos">
+            <h1>Videos go here</h1>
+          </div>
 
-                        </div>
+          <div id="websites">
+            <h1>Websites go here</h1>
+          </div>
+        
+
+                     
+
+                      
+
+<div class="fotorama" data-nav="thumbs">
+  <img src="./images/Portfolio/4.jpg">
+  <img src="./images/Portfolio/7.jpg">
+  <img src="./images/Portfolio/12.jpg">
+  <img src="./images/Portfolio/13.jpg">
+  <img src="./images/Portfolio/15.jpg">
+  <img src="./images/Portfolio/14.jpg">
+  <img src="./images/Portfolio/18.jpg">
+  <img src="./images/Portfolio/umbrella.jpg">
+  <img src="./images/Portfolio/bazooka.jpg">
+  <img src="./images/Portfolio/donkey.jpg">
+  <img src="./images/Portfolio/tv.jpg">
+  <img src="./images/Portfolio/city.jpg">
+  <img src="./images/Portfolio/cloud.jpg">
+  <img src="./images/Portfolio/keys.jpg">
+  <img src="./images/Portfolio/jump.jpg">
+  <img src="./images/Portfolio/angel.jpg">
+  <img src="./images/Portfolio/stereo.jpg">
+  <img src="./images/Portfolio/snowing.jpg">
+  <img src="./images/Portfolio/8.jpg">
+</div>
+
+                      
       <div class="video-container">
 
         <div class="content">
@@ -499,16 +458,10 @@
           <h5 class="famous-quote"></h5>
         </div>
       </div>
-        </div>
+     
     
     
-    <!-- SIDE TAB -->
-   
-  <div class="photo-tab">
-      <h4>PHOTOS</h4>
-    </div>
-  <div class="video-tab">
-      <h4>VIDEOS</h4>
+      </div>
     </div>
                                            </section>
   

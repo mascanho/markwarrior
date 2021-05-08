@@ -1078,12 +1078,14 @@ button:hover {
   display: flex;
 
   width: 100%;
+  max-width: 1100px;
   justify-content: space-evenly;
   flex-direction: row;
   padding: 0 10px 0 10px;
   overflow-x: hidden;
   min-width: 200px;
   letter-spacing: 1.2px;
+  margin: auto;
 
   img {
     width: 80%;
@@ -1127,18 +1129,20 @@ button:hover {
 #section2 {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   color: rgba(255, 255, 255, 0.76);
   background: linear-gradient(to right, #474747 0%, #212149 100%);
   display: block;
   text-align: center;
   position: relative;
-  overflow: auto;
+  overflow: hidden;
 
   h1 {
-    padding: 1.5em 0 5px 0;
-    margin-bottom: 20px;
-    font-size: 350%;
+    padding: 1.2em 0 0 0;
+    margin-bottom: 10px;
+    font-size: 310%;
     font-weight: 600;
   }
 
@@ -1158,6 +1162,87 @@ button:hover {
       padding: 20px;
     }
   }
+  // IMAGE GALLERY
+
+  #gallery__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+
+    .tabs {
+      margin: 0 auto 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+
+      ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+        background: #081735;
+        width: 100%;
+        max-width: 1100px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        height: 50px;
+
+        li {
+          font-size: 120%;
+          width: 100%;
+          border-bottom: 2px solid grey;
+          transition: 0.1s all ease-in-out;
+          margin: auto;
+          padding: 14px;
+
+          &:hover {
+            color: white;
+            cursor: pointer;
+            border-bottom: 2px solid white;
+          }
+
+          &:active {
+            border-bottom: 2px solid $main-color;
+            color: $main-color;
+          }
+        }
+      }
+    }
+  }
+
+  // FOTORAMA
+
+  .fotorama {
+    margin: -14px auto 0 auto;
+    width: 80%;
+    height: 100%;
+    max-width: 1100px;
+
+    img {
+      box-shadow: 1px 1px 1px black;
+      width: 100%;
+    }
+  }
+}
+
+// PORTFOLIO TABS
+
+#videos,
+#websites {
+  display: none;
+}
+
+.not-active {
+  display: none;
+}
+
+#videos.active {
+  display: block;
 }
 
 #section3 {
@@ -1389,12 +1474,13 @@ side-tab2.active {
     padding: 2em;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    margin: 2em auto auto 3em;
+    justify-content: center;
+    margin: 2em auto 0.8em auto;
     padding: 20px;
+    max-width: 1600px;
 
     .text {
-      width: 100%;
+      width: 80%;
       height: fit-content;
       display: flex;
       padding: 1em;
@@ -1403,6 +1489,7 @@ side-tab2.active {
       align-items: center;
       flex-shrink: 2;
       padding: 0 30px;
+      margin: 0 auto;
 
       > div {
         height: 90%;
@@ -1589,151 +1676,6 @@ side-tab2.active {
     justify-content: center;
     align-items: center;
   }
-}
-
-// IMAGE GALLERY
-
-/* Position the image container (needed to position the left and right arrows) */
-.gallery-container {
-  width: 80%;
-  height: 70%;
-  padding: 20px;
-  margin: 5% auto;
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  max-height: 700px;
-  max-width: fit-content;
-
-  a {
-    position: absolute;
-    margin: auto;
-  }
-
-  img {
-    vertical-align: middle;
-    object-fit: contain;
-    // border-radius: 5px;
-  }
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-  width: auto;
-  height: 85%;
-  max-height: 360px;
-  max-width: 600px;
-
-  border-radius: 10px;
-  position: relative;
-  overflow: hidden;
-  margin: 0 auto;
-  box-shadow: 1px 1px 10px black;
-}
-
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  bottom: 48%;
-  left: -37%;
-  width: 100%;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-  z-index: 0;
-  margin: auto auto;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: -110%;
-  border-radius: 3px 0 0 3px;
-  bottom: 48%;
-  z-index: 0;
-  position: absolute;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  color: white;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-  left: 50%;
-}
-
-/* Container for image text */
-.caption-container {
-  text-align: center;
-  background-color: transparent;
-  color: rgb(255, 255, 255);
-  width: 200px;
-  height: 40px;
-  margin: 10px auto;
-  display: flex;
-  justify-content: center;
-  transition: all 1s ease;
-  align-items: center;
-  border-radius: 30px;
-  position: absolute;
-  bottom: -15px;
-  right: 8em;
-  z-index: 0;
-  opacity: 0;
-
-  p {
-    font-size: 18px;
-    width: auto;
-    margin: 0;
-    padding: 0;
-  }
-
-  span {
-    font-size: 20px;
-  }
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Six columns side by side */
-.column {
-  float: left;
-  width: 16.66%;
-}
-
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
 }
 
 // Contact form
@@ -2107,15 +2049,16 @@ aside {
   border: 1px solid rgb(163, 163, 163);
   position: fixed;
   width: 480px;
-  background: linear-gradient(to right, #00646de5 0%, #02338f 100%);
+  background: linear-gradient(to right, #002b2fe5 0%, #000f2a 100%);
   border-radius: 5px;
-  height: 100px;
+  height: fit-content;
   margin: auto;
   align-items: center;
-  top: 50%;
+  bottom: 0%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: none;
+  font-size: 80%;
 
   h4 {
     margin-top: 30px;
