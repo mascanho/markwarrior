@@ -390,3 +390,11 @@ videoTab.addEventListener("click", () => {
     return;
   }
 });
+
+photoTab.addEventListener("click", () => {
+  console.log("clicked photo tab");
+  videoContent.classList.remove("active");
+  videoTab.style.borderBottom = "";
+  photoTab.style.borderBottom = "2px solid #d4334b";
+  fotorama.style.display = "block";
+});
